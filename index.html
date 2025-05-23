@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 <body>
 <!--start header-->
@@ -33,10 +34,8 @@
               class="w-full md:w-64 pl-10 pr-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500"/>
           <span class="absolute left-3 top-2.5 text-gray-400 dark:text-gray-300">🔍</span>
     </div>
-    <ul id="filmlist" class="mt-4 space-y-2 text-graay-800 dark:text-white"></ul>
+    <ul id="filmList" class="mt-4 space-y-2 text-graay-800 dark:text-white"></ul>
     <script>
-      const filmData=[
-      "Danur3","kakabos","underparis", "kemah terlarang"];
       const searchInput =document.getElementById("searchInput");
       const filmlist = document.getElementById("filmList");
 
@@ -44,7 +43,7 @@
         filmList.innerHTML=""; // kosongkan dulu
         data.forEach(title=>{
           const li =document.createElement("li");
-          li.tetxContent =title;
+          li.textContent =title;
           filmList.appendChild(li);
         });
       }
@@ -54,7 +53,7 @@
 
       searchInput.addEventListener("input", function(){
         const keyword =this.value.toLowerCase();
-        const filtered =filmData.filter(title => title.toLowerCase(keyword));
+        const filtered =filmData.filter(title => title.toLowerCase().includes(keyword));
         renderList(filtered);
       })
     </script>
@@ -75,111 +74,319 @@
   </section>
 
   <!-- Daftar Film -->
- <!--section film-->
- <section id= "film" class="mt-8 px-4">
-  <h1 class="text-1xl font-semibold text-gray-900 dark:text-white mb-5">Film Populer</h1>
+<!-- Bagian daftar film -->
+<section id="film" class="mt-8 px-4">
+  <header>
+      <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">Product Collection</h2>
 
-  <div class="grid grid-cols-5 gap-5">
-    <div class="h-32 rounded bg-cover bg-center" style="background-image: url('https://www.dosismedia.com/wp-content/uploads/2018/12/una-serie-de-eventos-desafortuna-2.jpg')"></div>
-    <div class="h-32 rounded bg-cover bg-center" style="background-image: url('aset/evil\ dead\ rise.jpg')"></div>
-    <div class="h-32 rounded bg-cover bg-center" style="background-image: url('https://image.tmdb.org/t/p/w1280/3cQLHeHphHgoamLxpOobyoPCH0e.jpg')"></div>
-    <div class="h-32 rounded bg-cover bg-center" style="background-image: url('https://statik.tempo.co/data/2023/12/13/id_1262844/1262844_720.jpg')"></div>
-    <div class="h-32 rounded bg-cover bg-center" style="background-image: url('https://tse4.mm.bing.net/th?id=OIP.Pc5XqWRDZqnqUPvYtmARaQHaDt&pid=Api&P=0&h=180')"></div>
-    <div class="h-32 rounded bg-cover bg-center" style="background-image: url('https://d1tgyzt3mf06m9.cloudfront.net/v3-staging/2023/11/Teaser-Poster_Landscape.jpg')"></div>
-    <div class="h-32 rounded bg-cover bg-center" style="background-image: url('https://asset-2.tstatic.net/palu/foto/bank/images/Sinopsis-Film-horor-Indonesia-berjudul-Sumala.jpg')"></div>
-    <div class="h-32 rounded bg-cover bg-center" style="background-image: url('https://cms.dmpcdn.com/movie/2024/10/04/8fc990d0-81ff-11ef-af21-8df0975922ba_webp_original.webp')"></div>
-    <div class="h-32 rounded bg-cover bg-center" style="background-image: url('http://helloindonesia.id/wp-content/uploads/2024/08/Sekawan-limo-poster-Helloindonesia.jpg')"></div>
-    <div class="h-32 rounded bg-cover bg-center" style="background-image: url('https://img.okezone.com/content/2025/04/16/206/3131296/film_jumbo-eHWC_large.jpeg')"></div>
-    <div class="h-32 rounded bg-cover bg-center" style="background-image: url('https://assets.pikiran-rakyat.com/crop/0x0:0x0/703x0/webp/photo/2024/10/17/1203872872.jpeg')"></div>
-    <div class="h-32 rounded bg-cover bg-center" style="background-image: url('aset/danur.jpg')"></div>
-    <div class="h-32 rounded bg-cover bg-center" style="background-image: url('aset/home\ sweet\ loan.jpg')"></div>
-    <div class="h-32 rounded bg-cover bg-center" style="background-image: url('aset/kakabos.jpg')"></div>
-    <div class="h-32 rounded bg-cover bg-center" style="background-image: url('aset/kemah\ terlarang.jpg')"></div>
-    <div class="h-32 rounded bg-cover bg-center" style="background-image: url('aset/mirachel\ in\ cell\ no\ 7.jpg')"></div>
-    <div class="h-32 rounded bg-cover bg-center" style="background-image: url('aset/under\ paris.jpg')"></div>
-    <div class="h-32 rounded bg-cover bg-center" style="background-image: url('https://www.nintenderos.com/wp-content/uploads/2023/02/pelicula-marios.jpg')"></div>
-    <div class="h-32 rounded bg-cover bg-center" style="background-image: url('https://lumiere-a.akamaihd.net/v1/images/image_b349f970.jpeg')"></div>
-    <div class="h-32 rounded bg-cover bg-center" style="background-image: url('https://www.hdwallpapers.in/download/courteney_cox_as_gale_weathers__melissa_barrera_as_sam_carpenter__jenna_ortega_as_tara_carpenter__jasmin_savoy_brown_as_mindy_meeks_martin__mason_gooding_4k_hd_scream_vi-HD.jpg')"></div>
-    <div class="h-32 rounded bg-cover bg-center" style="background-image: url('https://data.ibtimes.sg/en/full/36943/hospital-playlist.jpg')"></div>
-    <div class="h-32 rounded bg-cover bg-center" style="background-image: url('https://i.pinimg.com/736x/58/19/78/5819780f6bb2c47ea3386331729800b4.jpg')"></div>
-    <div class="h-32 rounded bg-cover bg-center" style="background-image: url('https://static1.srcdn.com/wordpress/wp-content/uploads/2023/11/two-players-threaten-to-sue-netflix-over-alleged-injuries-from-squid-games_-the-challenge-1.jpg')"></div>
-    <div class="h-32 rounded bg-cover bg-center" style="background-image: url('https://prod-images.viu.com/clip_asset_v6/1166083010/1166088672/d6cc8e4903b8e2309f6c509f18bad1082b2f19bc')"></div>
-    <div class="h-32 rounded bg-cover bg-center" style="background-image: url('https://assets.pikiran-rakyat.com/crop/0x0:0x0/1200x675/photo/2025/01/12/1425384310.jpeg')"></div>
-    <div class="h-32 rounded bg-cover bg-center" style="background-image: url('https://about.vidio.com/wp-content/uploads/2021/01/KV_Blog_ashfall.jpg')"></div>
-    <div class="h-32 rounded bg-cover bg-center" style="background-image: url('https://about.vidio.com/wp-content/uploads/2021/01/KV_Blog_ashfall.jpg')"></div>
+      <p class="mt-4 max-w-md text-gray-500 mb-10">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque praesentium cumque iure
+        dicta incidunt est ipsam, officia dolor fugit natus?
+      </p>
+
+  </header>
+
+  <!--Kategori Horor-->
+
+  <h1 class="text-x1 font-semibold text-gray-900 dark:text-white mb-5 ">Film Horor</h1>
+  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 mb-10">
+    <a href="#" onclick="openModal('Danur', 
+          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
+          'Neil Patrick Harris, Malina Weissman')" 
+            class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
+        <img src="aset/danur.jpg" alt="My Annoying Brother" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
+        <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
+          <h3 class="text-sm font-semibold text-white">
+            Danur
+          </h3>
+        </div>
+    </a>
+
+    <a href="#" onclick="openModal('Sumala', 
+          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
+          'Neil Patrick Harris, Malina Weissman')" 
+            class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
+        <img src="https://asset-2.tstatic.net/palu/foto/bank/images/Sinopsis-Film-horor-Indonesia-berjudul-Sumala.jpg" alt="Sumala" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
+        <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
+          <h3 class="text-sm font-semibold text-white">
+            Sumala
+          </h3>
+        </div>
+    </a>
+
+    <a href="#" onclick="openModal('Evil Dead Rise', 
+          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
+          'Neil Patrick Harris, Malina Weissman')" 
+            class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
+        <img src="aset/evil%20dead%20rise.jpg" alt="Evil Dead Rise" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
+        <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
+          <h3 class="text-sm font-semibold text-white">
+            Evil Dead Rise
+          </h3>
+        </div>
+    </a>
+    
+    <a href="#" onclick="openModal('Petaka Gunung Gede', 
+          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
+          'Neil Patrick Harris, Malina Weissman')" 
+            class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
+        <img src="https://assets.pikiran-rakyat.com/crop/0x0:0x0/1200x675/photo/2025/01/12/1425384310.jpeg" alt="Petaka Gunung Gede" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
+        <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
+          <h3 class="text-sm font-semibold text-white">
+            Petaka Gunung Gede
+          </h3>
+        </div>
+    </a>
+    
+    <a href="#" onclick="openModal('Kemah Terlarang', 
+          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
+          'Neil Patrick Harris, Malina Weissman')" 
+            class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
+        <img src="aset/kemah terlarang.jpg" alt="Kemah Terlarang" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
+        <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
+          <h3 class="text-sm font-semibold text-white">
+            Kemah Terlarang
+          </h3>
+        </div>
+    </a>
   </div>
-</section> 
-
-  <section>
-    <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6">Daftar Film</h2>
-    <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-      <!-- Card Film 1 -->
-      <div class="bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
-        <img
-          src="https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg"
-          alt="Wonder Woman 1984"
-          class="w-full h-48 object-cover"
-        />
-        <div class="p-4">
-          <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Wonder Woman 1984</h3>
-          <p class="mt-1 text-gray-600 dark:text-gray-300 text-sm">Action, Adventure</p>
-          <p class="mt-2 text-gray-700 dark:text-gray-400 text-sm">
-            Diana Prince embarks on a new adventure during the Cold War era.
-          </p>
+<!--Kategori Hiburan-->
+  <h1 class="text-x1 font-semibold text-gray-900 dark:text-white mb-5 ">Film Hiburan</h1>
+  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 mb-10">
+      <a href="#" onclick="openModal('Una Serie de Eventos Desafortunados', 
+          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba mengungkap misteri kematian orang tuanya.', 
+          'Neil Patrick Harris, Malina Weissman')" 
+            class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
+        <img src="https://www.dosismedia.com/wp-content/uploads/2018/12/una-serie-de-eventos-desafortuna-2.jpg" alt="un a series de eventos desafortuna" class="w-full h-auto object-cover transition duration-500 group-hover:scale-105 block">
+        <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
+          <h3 class="text-sm font-semibold text-white">
+            Un a Series de Eventos Desafortunados
+          </h3>
         </div>
-      </div>
+      </a>
 
-      <!-- Card Film 2 -->
-      <div class="bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
-        <img
-          src="https://image.tmdb.org/t/p/w500/9O1Iy9od7cxYxkwnr1Cw6T6a3nK.jpg"
-          alt="Black Widow"
-          class="w-full h-48 object-cover"
-        />
-        <div class="p-4">
-          <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Black Widow</h3>
-          <p class="mt-1 text-gray-600 dark:text-gray-300 text-sm">Action, Thriller</p>
-          <p class="mt-2 text-gray-700 dark:text-gray-400 text-sm">
-            Natasha Romanoff confronts her dark past in this Marvel thriller.
-          </p>
+      <a href="#" onclick="openModal('Agak Laen', 
+          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
+          'Neil Patrick Harris, Malina Weissman')" 
+            class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
+        <img src="https://statik.tempo.co/data/2023/12/13/id_1262844/1262844_720.jpg" alt="Agak Laen" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
+        <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
+          <h3 class="text-sm font-semibold text-white">
+            Agak Laen
+          </h3>
         </div>
-      </div>
+      </a>
 
-      <!-- Card Film 3 -->
-      <div class="bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
-        <img
-          src="https://image.tmdb.org/t/p/w500/xBHvZcjRiWyobQ9kxBhO6B2dtRI.jpg"
-          alt="Ad Astra"
-          class="w-full h-48 object-cover"
-        />
-        <div class="p-4">
-          <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Ad Astra</h3>
-          <p class="mt-1 text-gray-600 dark:text-gray-300 text-sm">Sci-Fi, Drama</p>
-          <p class="mt-2 text-gray-700 dark:text-gray-400 text-sm">
-            An astronaut journeys across the solar system to find his father.
-          </p>
+      <a href="#" onclick="openModal('Avatar', 
+          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
+          'Neil Patrick Harris, Malina Weissman')" 
+            class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
+        <img src="https://tse4.mm.bing.net/th?id=OIP.Pc5XqWRDZqnqUPvYtmARaQHaDt&pid=Api&P=0&h=180" alt="Avatar" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
+        <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
+          <h3 class="text-sm font-semibold text-white">
+            Avatar
+          </h3>
         </div>
-      </div>
+      </a>
 
-      <!-- Card Film 4 -->
-      <div class="bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
-        <img
-          src="https://image.tmdb.org/t/p/w500/q719jXXEzOoYaps6babgKnONONX.jpg"
-          alt="Jumanji: The Next Level"
-          class="w-full h-48 object-cover"
-        />
-        <div class="p-4">
-          <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Jumanji: The Next Level</h3>
-          <p class="mt-1 text-gray-600 dark:text-gray-300 text-sm">Adventure, Comedy</p>
-          <p class="mt-2 text-gray-700 dark:text-gray-400 text-sm">
-            The gang returns for another adventure inside the game.
-          </p>
+      <a href="#" onclick="openModal('Jumbo', 
+          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
+          'Neil Patrick Harris, Malina Weissman')" 
+            class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
+        <img src="https://statik.tempo.co/data/2025/03/15/id_1384879/1384879_720.jpg" alt="Jumbo" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
+        <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
+          <h3 class="text-sm font-semibold text-white">
+            Jumbo
+          </h3>
         </div>
-      </div>
+      </a>
+
+      <a href="#" onclick="openModal('Squit Game', 
+          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
+          'Neil Patrick Harris, Malina Weissman')" 
+            class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
+        <img src="https://static1.srcdn.com/wordpress/wp-content/uploads/2023/11/two-players-threaten-to-sue-netflix-over-alleged-injuries-from-squid-games_-the-challenge-1.jpg" alt="Squit Game" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
+        <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
+          <h3 class="text-sm font-semibold text-white">
+            Squit Game
+          </h3>
+        </div>
+      </a>
+
+      <a href="#" onclick="openModal('The Super Mario Bros', 
+          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
+          'Neil Patrick Harris, Malina Weissman')" 
+            class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
+        <img src="https://www.nintenderos.com/wp-content/uploads/2023/02/pelicula-marios.jpg" alt="The Super Mario Bros" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
+        <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
+          <h3 class="text-sm font-semibold text-white">
+            The Super Mario Bros
+          </h3>
+        </div>
+      </a>
+
+      <a href="#" onclick="openModal('Frozen', 
+          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
+          'Neil Patrick Harris, Malina Weissman')" 
+            class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
+        <img src="https://lumiere-a.akamaihd.net/v1/images/image_b349f970.jpeg" alt="The Super Mario Bros" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
+        <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
+          <h3 class="text-sm font-semibold text-white">
+            Frozen
+          </h3>
+        </div>
+      </a>
+  </div>
+
+<!--Kategori  Thriller-->
+  <h1 class="text-x1 font-semibold text-gray-900 dark:text-white mb-5 ">Film Thriller</h1>
+  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 mb-10">
+
+      <a href="#" onclick="openModal('The Super Mario Bros', 
+          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
+          'Neil Patrick Harris, Malina Weissman')" 
+            class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
+        <img src="https://www.nintenderos.com/wp-content/uploads/2023/02/pelicula-marios.jpg" alt="Frozen" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
+        <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
+          <h3 class="text-sm font-semibold text-white">
+            The Super Mario Bros
+          </h3>
+        </div>
+      </a>
+
+      <a href="#" onclick="openModal('The Saddness', 
+          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba mengungkap misteri kematian orang tuanya.', 
+          'Neil Patrick Harris, Malina Weissman')" 
+            class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
+        <img src="https://image.tmdb.org/t/p/w1280/3cQLHeHphHgoamLxpOobyoPCH0e.jpg" alt="the saddness" class="w-full h-auto object-cover transition duration-500 group-hover:scale-105 block">
+        <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
+          <h3 class="text-sm font-semibold text-white">
+            The Saddness
+          </h3>
+        </div>
+      </a>
+      
+      <a href="#" onclick="openModal('Evil Dead Rise', 
+          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
+          'Neil Patrick Harris, Malina Weissman')" 
+            class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
+        <img src="aset/evil%20dead%20rise.jpg" alt="Evil Dead Rise" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
+        <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
+          <h3 class="text-sm font-semibold text-white">
+            Evil Dead Rise
+          </h3>
+        </div>
+      </a>
+
+      
+      <a href="#" onclick="openModal('13 Bom Di Jakarta', 
+          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
+          'Neil Patrick Harris, Malina Weissman')" 
+            class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
+        <img src="https://d1tgyzt3mf06m9.cloudfront.net/v3-staging/2023/11/Teaser-Poster_Landscape.jpg" alt="13 Bom Di Jakarta" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
+        <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
+          <h3 class="text-sm font-semibold text-white">
+            13 Bom Di Jakarta
+          </h3>
+        </div>
+      </a>
+      
+
+      <a href="#" onclick="openModal('Hijack 1971', 
+          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
+          'Neil Patrick Harris, Malina Weissman')" 
+            class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
+        <img src="https://cms.dmpcdn.com/movie/2024/10/04/8fc990d0-81ff-11ef-af21-8df0975922ba_webp_original.webp" alt="Hijack 1971" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
+        <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
+          <h3 class="text-sm font-semibold text-white">
+            Hijac 1971
+          </h3>
+        </div>
+      </a>
+
+      <a href="#" onclick="openModal('Sekawan Limo', 
+          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
+          'Neil Patrick Harris, Malina Weissman')" 
+            class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
+        <img src="https://cdn.idntimes.com/content-images/community/2024/07/screenshot-20240705-095902-instagram-df0f23db2eb9b00f31c583ec461bb2da-bd806b39fcd6f00c418412bbdcc3d76f_600x400.jpg" alt="Sekawan Limo" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
+        <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
+          <h3 class="text-sm font-semibold text-white">
+            Sekawan Limo
+          </h3>
+        </div>
+      </a>
+      
+      <a href="#" onclick="openModal('My Annoying Brother', 
+          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
+          'Neil Patrick Harris, Malina Weissman')" 
+            class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
+        <img src="https://assets.pikiran-rakyat.com/crop/0x0:0x0/703x0/webp/photo/2024/10/17/1203872872.jpeg" alt="My Annoying Brother" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
+        <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
+          <h3 class="text-sm font-semibold text-white">
+            My Annoying Brother
+          </h3>
+        </div>
+      </a>
+      
+      <a href="#" onclick="openModal('Danur', 
+          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
+          'Neil Patrick Harris, Malina Weissman')" 
+            class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
+        <img src="aset/danur.jpg" alt="My Annoying Brother" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
+        <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
+          <h3 class="text-sm font-semibold text-white">
+            Danur
+          </h3>
+        </div>
+      </a>
+      
+
+
+    
+
+      <div class="h-32 rounded bg-cover bg-center" style="background-image: url('aset/home\ sweet\ loan.jpg')"></div>
+      <div class="h-32 rounded bg-cover bg-center" style="background-image: url('aset/kakabos.jpg')"></div>
+      <div class="h-32 rounded bg-cover bg-center" style="background-image: url('aset/mirachel\ in\ cell\ no\ 7.jpg')"></div>
+      <div class="h-32 rounded bg-cover bg-center" style="background-image: url('aset/under\ paris.jpg')"></div>
+      <div class="h-32 rounded bg-cover bg-center" style="background-image: url('')"></div>
+      <div class="h-32 rounded bg-cover bg-center" style="background-image: url('')"></div>
+      <div class="h-32 rounded bg-cover bg-center" style="background-image: url('https://www.hdwallpapers.in/download/courteney_cox_as_gale_weathers__melissa_barrera_as_sam_carpenter__jenna_ortega_as_tara_carpenter__jasmin_savoy_brown_as_mindy_meeks_martin__mason_gooding_4k_hd_scream_vi-HD.jpg')"></div>
+      <div class="h-32 rounded bg-cover bg-center" style="background-image: url('https://data.ibtimes.sg/en/full/36943/hospital-playlist.jpg')"></div>
+      <div class="h-32 rounded bg-cover bg-center" style="background-image: url('https://i.pinimg.com/736x/58/19/78/5819780f6bb2c47ea3386331729800b4.jpg')"></div>
+      <div class="h-32 rounded bg-cover bg-center" style="background-image: url('')"></div>
+      <div class="h-32 rounded bg-cover bg-center" style="background-image: url('https://prod-images.viu.com/clip_asset_v6/1166083010/1166088672/d6cc8e4903b8e2309f6c509f18bad1082b2f19bc')"></div>
+      <div class="h-32 rounded bg-cover bg-center" style="background-image: url('')"></div>
+      <div class="h-32 rounded bg-cover bg-center" style="background-image: url('https://about.vidio.com/wp-content/uploads/2021/01/KV_Blog_ashfall.jpg')"></div>
+      <div class="h-32 rounded bg-cover bg-center" style="background-image: url('https://about.vidio.com/wp-content/uploads/2021/01/KV_Blog_ashfall.jpg')"></div>
+  </div>
+
+  <!-- Modal -->
+  <div id="filmModal" class="fixed inset-0 bg-gray-100 dark:bg-gray-800 hidden justify-center items-center z-50">
+    <div class="bg-white p-6 rounded-lg max-w-md w-full relative">
+      <button onclick="closeModal()" class="absolute top-2 right-2 text-gray-500 hover:text-red-500 text-xl">&times;</button>
+      <h2 id="modalTitle" class="text-xl font-semibold text-gray-900 dark:text-white mb-2"></h2>
+      <p id="modalDesc" class="text-sm text-gray-700 dark:text-gray-300 mb-3"></p>
+      <p id="modalCast" class="text-sm text-gray-700 dark:text-gray-300"><span class="font-semibold">Pemeran:</span> </p>
     </div>
-  </section>
+  </div>
+
+  <!-- Script -->
+  <script>
+    function openModal(title, description, cast) {
+      document.getElementById('modalTitle').innerText = title;
+      document.getElementById('modalDesc').innerText = description;
+      document.getElementById('modalCast').innerHTML = `<span class="font-semibold">Pemeran:</span> ${cast}`;
+      document.getElementById('filmModal').classList.remove('hidden');
+      document.getElementById('filmModal').classList.add('flex');
+    }
+
+    function closeModal() {
+      document.getElementById('filmModal').classList.add('hidden');
+      document.getElementById('filmModal').classList.remove('flex');
+    }
+  </script>
+
+</section>
 </main>
-
-
 </body>
 </html>
