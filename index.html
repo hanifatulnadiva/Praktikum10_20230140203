@@ -33,26 +33,38 @@
   </div>
 </header> 
 <!--end header-->
-
-<main class="bg-gray-100 dark:bg-gray-800 min-h-screen py-10 px-4 sm:px-6 lg:px-8">
 <!--Hero section-->
 <section>
-  <div class="swiper mySwiper w-screen h-screen">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide relative">
-        <img src="aset/home sweet loan.jpg" class="w-full h-full object-cover" />
+  <div class="swiper mySwiper w-full h-[600px]  overflow-hidden">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide relative">
+          <img src="aset/danur.jpg" class="min-w-full min-h-full object-cover" />
+          <div class="absolute inset-0 bg-dark bg-opacity-50 flex flex-col justify-center items-center text-white text-center px-0">
+
+          </div>
+        </div>
+        <div class="swiper-slide relative">
+          <img src="aset/under paris.jpg" class="min-w-full min-h-full object-cover object-cover " />
+          <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white text-center px-6">
+
+          </div>
+        </div>
+        <div class="swiper-slide relative">
+          <img src="aset/evil dead rise.jpg" class="min-w-full min-h-full object-cover"/>
+          <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white text-center px-6">
+          </div>
+        </div>
       </div>
-    </div>
-      <div class="swiper-slide"><img src="aset/under paris.jpg" /></div>
-      <div class="swiper-slide"><img src="aset/evil dead rise.jpg" /></div>
-    </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next z-50"></div>
+      <div class="swiper-button-prev z-50"></div>
   </div>
 </section>
+<!--eend hero -->
 
+<main class="bg-gray-100 dark:bg-gray-800 min-h-screen py-10 px-4 sm:px-6 lg:px-8">
   <!-- Selamat Datang -->
   <section id="welcome page" class="mb-10 text-center">
+    
     <h1 class="text-4xl font-extrabold text-gray-900 dark:text-white mb-4">
       Selamat Datang di Website Film Kami
     </h1>
@@ -577,8 +589,8 @@
       }
      });
   </script>
-
-  <!--Scrip hero section-->
+</section>
+</main>
 <script>
   new Swiper(".mySwiper", {
     navigation: {
@@ -586,9 +598,13 @@
       prevEl: ".swiper-button-prev",
     },
     loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    effect: "fade",
   });
+
 </script>
-</section>
-</main>
 </body>
 </html>
