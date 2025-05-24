@@ -19,15 +19,16 @@
     <nav aria-label="Global" class="hidden md:block">
       <ul class="flex items-center gap-6 text-sm">
         <li><a class="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
-                href="#welcome page">Beranda</a></li>
+                href="beranda.html">Beranda</a></li>
         <li><a class="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
-                href="#film">Film</a></li>
+                href="index.html">Film</a></li>
         <li><a class="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
-                href="#">Trending</a></li>
+                href="trending.html">Trending</a></li>
         <li><a class="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
                 href="#">History</a></li>
       </ul>
     </nav>
+
 <!-- Search bar -->
     <div class="relative mt-2 md:mt-0">
       <input id="searchInput" type="text" placeholder="Cari film..."
@@ -35,53 +36,21 @@
           <span class="absolute left-3 top-2.5 text-gray-400 dark:text-gray-300">🔍</span>
     </div>
     <ul id="filmList" class="mt-4 space-y-2 text-graay-800 dark:text-white"></ul>
-    <script>
-      const searchInput =document.getElementById("searchInput");
-      const filmlist = document.getElementById("filmList");
-
-      function renderList(data){
-        filmList.innerHTML=""; // kosongkan dulu
-        data.forEach(title=>{
-          const li =document.createElement("li");
-          li.textContent =title;
-          filmList.appendChild(li);
-        });
-      }
-
-      //tampilkan semua film di awal
-      renderList(filmData)
-
-      searchInput.addEventListener("input", function(){
-        const keyword =this.value.toLowerCase();
-        const filtered =filmData.filter(title => title.toLowerCase().includes(keyword));
-        renderList(filtered);
-      })
-    </script>
   </div>
 </header> 
 <!--end header-->
 
 <main class="bg-gray-100 dark:bg-gray-800 min-h-screen py-10 px-4 sm:px-6 lg:px-8">
 
-  <!-- Selamat Datang -->
-  <section id="welcome page" class="mb-10 text-center">
-    <h1 class="text-4xl font-extrabold text-gray-900 dark:text-white mb-4">
-      Selamat Datang di Website Film Kami
-    </h1>
-    <p class="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
-      Temukan film favoritmu dan nikmati rekomendasi terbaik setiap hari.
-    </p>
-  </section>
-
   <!-- Daftar Film -->
 <!-- Bagian daftar film -->
-<section id="film" class="mt-8 px-4">
+<section id="film" class=" mt-8 px-4">
   <header>
-      <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">Product Collection</h2>
+      <h2 class="text-xl font-bold text-white sm:text-3xl">Film Collection</h2>
 
-      <p class="mt-4 max-w-md text-gray-500 mb-10">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque praesentium cumque iure
-        dicta incidunt est ipsam, officia dolor fugit natus?
+      <p class="mt-4 max-w-md  text-gray-700 dark:text-gray-300 mb-10">
+        Nikmati koleksi film dari berbagai genre seperti horor yang menegangkan, thriller penuh misteri, 
+        hingga drama yang menyentuh hati — semua tersedia untuk menghibur Anda kapan saja
       </p>
 
   </header>
@@ -90,21 +59,35 @@
 
   <h1 class="text-x1 font-semibold text-gray-900 dark:text-white mb-5 ">Film Horor</h1>
   <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 mb-10">
-    <a href="#" onclick="openModal('Danur', 
-          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
-          'Neil Patrick Harris, Malina Weissman')" 
-            class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
+    <a href="#" onclick= "openModal(
+      'https://www.youtube.com/embed/9EsGdyVx6HM?si=hp0m0wS_VcLpJGfS', 
+      'Danur', 
+      'Sunyaruri melanjutkan kisah Risa, gadis yang memiliki kemampuan melihat makhluk halus sejak kecil. Kini remaja, Risa menghadapi teror dari sosok gaib bernama Sunyaruri yang mengancam dirinya dan keluarganya. Dengan keberanian, ia berusaha mengungkap misteri dunia gaib tersebut untuk melindungi orang-orang terdekatnya',       'Prilly Latuconsina, Adhisty Zara, Sandrinna Michelle, Wesley Andrew, dan Tio Pakusadewo')"
+      film-title="Danur3"
+      class="film-card relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
         <img src="aset/danur.jpg" alt="My Annoying Brother" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
         <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
           <h3 class="text-sm font-semibold text-white">
-            Danur
+            Danur 3
           </h3>
         </div>
     </a>
+    
+    <a href="#" onclick="openModal('https://www.youtube.com/embed/dkbwPpPJCLo?si=-GARJlAcDGoK-wr4','Badarawuhi Di Desa Peneari(2024)', 
+        'Film ini menceritakan asal-usul Badarawuhi, sosok penari gaib yang menjaga Desa Penari. Cerita berlangsung sebelum kejadian di film KKN di Desa Penari, mengungkap rahasia kelam dan larangan mistis di desa tersebut.',
+        'Aulia Sarah, Maudy Effrosina, Jourdy Pranata, Clairine Clay, Omara Esteghlal, Diding Boneng')"
+        film-title="Badarawuhi"
+        class="film-card relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
+      <img src="https://cdn-1.timesmedia.co.id/images/2024/01/23/badarawuhi.jpg" alt="Badarawuhi" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
+      <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
+        <h3 class="text-sm font-semibold text-white">Badarawuhi Di Desa Penari</h3>
+      </div>
+    </a>
 
-    <a href="#" onclick="openModal('Sumala', 
-          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
-          'Neil Patrick Harris, Malina Weissman')" 
+    <a href="#" onclick="openModal('Sumala (2024)', 
+          'Film horor religi tentang seorang santri bernama Sumala yang dihantui sosok gaib di pesantren. Ia harus menghadapi gangguan supranatural sambil menjaga keimanannya', 
+          'Adhisty Zara, Ibrahim Risyad, Slamet Rahardjo, Unique Priscilla, dan Yusuf Mahardika')" 
+          film-title="Sumala"
             class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
         <img src="https://asset-2.tstatic.net/palu/foto/bank/images/Sinopsis-Film-horor-Indonesia-berjudul-Sumala.jpg" alt="Sumala" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
         <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
@@ -114,10 +97,12 @@
         </div>
     </a>
 
-    <a href="#" onclick="openModal('Evil Dead Rise', 
-          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
-          'Neil Patrick Harris, Malina Weissman')" 
+    <a href="#" onclick="openModal('https://www.youtube.com/embed/smTK_AeAPHs?si=4ajfOUVlel5aHBZn','Evil Dead Rise(2023)', 
+          'Kisah dua saudara perempuan yang terpisah lama, kembali dipertemukan saat iblis jahat muncul dan meneror sebuah apartemen. Mereka harus bertahan dari kutukan mengerikan yang mengubah manusia menjadi makhluk haus darah.', 
+          'Lily Sullivan, Alyssa Sutherland, Morgan Davies, Gabrielle Echols, Nell Fisher.')" 
+          film-title="Evil Dead Rise"
             class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
+    
         <img src="aset/evil%20dead%20rise.jpg" alt="Evil Dead Rise" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
         <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
           <h3 class="text-sm font-semibold text-white">
@@ -479,31 +464,61 @@
   </div>
 
   <!-- Modal -->
-  <div id="filmModal" class="fixed inset-0 bg-gray-100 dark:bg-gray-800 hidden justify-center items-center z-50">
-    <div class="bg-white p-6 rounded-lg max-w-md w-full relative">
-      <button onclick="closeModal()" class="absolute top-2 right-2 text-gray-500 hover:text-red-500 text-xl">&times;</button>
-      <h2 id="modalTitle" class="text-xl font-semibold text-gray-900 dark:text-white mb-2"></h2>
+  <div id="filmModal" class="fixed inset-0 hidden justify-center items-center z-50">
+    <div class=" bg-gray-900 text-white w-full max-w-md mx-4 rounded-lg p-6 relative ">
+      <button onclick="closeModal()" class="absolute top-3 right-4 text-gray-500 hover:text-red-500 text-2xl text-white">&times;</button>
+      <div id="modalTrailer"></div>
+      <h2 id="modalTitle" class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Judul Film</h2>
       <p id="modalDesc" class="text-sm text-gray-700 dark:text-gray-300 mb-3"></p>
-      <p id="modalCast" class="text-sm text-gray-700 dark:text-gray-300"><span class="font-semibold">Pemeran:</span> </p>
+      <p id="modalCast" class="text-sm text-gray-700 dark:text-gray-300"></p>
     </div>
   </div>
 
   <!-- Script -->
   <script>
-    function openModal(title, description, cast) {
-      document.getElementById('modalTitle').innerText = title;
-      document.getElementById('modalDesc').innerText = description;
-      document.getElementById('modalCast').innerHTML = `<span class="font-semibold">Pemeran:</span> ${cast}`;
+    function openModal(trailer,title, description, cast) {
+      const embedLink = trailer.includes("watch?v=")
+      ? trailer.replace("watch?v=", "embed/")
+      : trailer;
+
+      document.getElementById('modalTrailer').innerHTML= `<iframe width="100%" height="200" src="${trailer}" frameborder="0" allowfullscreen></iframe>`;
+      document.getElementById('modalTitle').textContent = title;
+      document.getElementById('modalDesc').textContent= description;
+      document.getElementById('modalCast').textContent = "Pemeran: " + cast;
       document.getElementById('filmModal').classList.remove('hidden');
-      document.getElementById('filmModal').classList.add('flex');
+     // document.getElementById('filmModal').classList.add('flex');
+      
+      const modal = document.getElementById('filmModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
     }
 
     function closeModal() {
-      document.getElementById('filmModal').classList.add('hidden');
-      document.getElementById('filmModal').classList.remove('flex');
+      const modal = document.getElementById('filmModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      //document.getElementById('filmModal').classList.add('hidden');
+
+     // document.getElementById('filmModal').classList.remove('flex');
+     // Hapus iframe agar video berhenti saat modal ditutup
+      document.getElementById('modalTrailer').innerHTML = '';
     }
   </script>
 
+  <script>
+      const searchInput =document.getElementById("searchInput");
+
+      searchInput.addEventListener("input", function(){
+        const keyword =this.value.toLowerCase();
+        const filmCards =document.querySelectorAll('.film-card');
+
+        filmCards.forEach(card=>{
+          const title =card.getAttribute("film-title").toLowerCase();
+          const match = title.includes(keyword);
+          card.style.display =match ? "block":"none";
+        });
+      });
+    </script>
 </section>
 </main>
 </body>
