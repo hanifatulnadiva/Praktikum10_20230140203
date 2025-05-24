@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
 </head>
 <body>
@@ -33,6 +35,21 @@
 <!--end header-->
 
 <main class="bg-gray-100 dark:bg-gray-800 min-h-screen py-10 px-4 sm:px-6 lg:px-8">
+<!--Hero section-->
+<section>
+  <div class="swiper mySwiper w-screen h-screen">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide relative">
+        <img src="aset/home sweet loan.jpg" class="w-full h-full object-cover" />
+      </div>
+    </div>
+      <div class="swiper-slide"><img src="aset/under paris.jpg" /></div>
+      <div class="swiper-slide"><img src="aset/evil dead rise.jpg" /></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</section>
 
   <!-- Selamat Datang -->
   <section id="welcome page" class="mb-10 text-center">
@@ -560,6 +577,17 @@
       }
      });
   </script>
+
+  <!--Scrip hero section-->
+<script>
+  new Swiper(".mySwiper", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    loop: true,
+  });
+</script>
 </section>
 </main>
 </body>
