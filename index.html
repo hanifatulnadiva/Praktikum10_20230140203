@@ -59,21 +59,25 @@
 
   <h1 class="text-x1 font-semibold text-gray-900 dark:text-white mb-5 ">Film Horor</h1>
   <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 mb-10">
-    <a href="#" onclick= "openModal(
+    <a href="#" onclick= "event.preventDefault(); openModal(
       'https://www.youtube.com/embed/9EsGdyVx6HM?si=hp0m0wS_VcLpJGfS', 
       'Danur', 
       'Sunyaruri melanjutkan kisah Risa, gadis yang memiliki kemampuan melihat makhluk halus sejak kecil. Kini remaja, Risa menghadapi teror dari sosok gaib bernama Sunyaruri yang mengancam dirinya dan keluarganya. Dengan keberanian, ia berusaha mengungkap misteri dunia gaib tersebut untuk melindungi orang-orang terdekatnya',       'Prilly Latuconsina, Adhisty Zara, Sandrinna Michelle, Wesley Andrew, dan Tio Pakusadewo')"
       film-title="Danur3"
       class="film-card relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
         <img src="aset/danur.jpg" alt="My Annoying Brother" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
+        <video class="absolute top-0 left-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+         src="https://www.youtube.com/embed/9EsGdyVx6HM?si=hp0m0wS_VcLpJGfS" autoplay muted loop></video>
         <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
           <h3 class="text-sm font-semibold text-white">
             Danur 3
           </h3>
         </div>
+
     </a>
     
-    <a href="#" onclick="openModal('https://www.youtube.com/embed/dkbwPpPJCLo?si=-GARJlAcDGoK-wr4','Badarawuhi Di Desa Peneari(2024)', 
+    <a href="#" onclick="event.preventDefault(); openModal('https://www.youtube.com/embed/dkbwPpPJCLo?si=-GARJlAcDGoK-wr4',
+        'Badarawuhi Di Desa Peneari(2024)', 
         'Film ini menceritakan asal-usul Badarawuhi, sosok penari gaib yang menjaga Desa Penari. Cerita berlangsung sebelum kejadian di film KKN di Desa Penari, mengungkap rahasia kelam dan larangan mistis di desa tersebut.',
         'Aulia Sarah, Maudy Effrosina, Jourdy Pranata, Clairine Clay, Omara Esteghlal, Diding Boneng')"
         film-title="Badarawuhi"
@@ -84,7 +88,8 @@
       </div>
     </a>
 
-    <a href="#" onclick="openModal('Sumala (2024)', 
+    <a href="#" onclick="event.preventDefault(); openModal('https://www.youtube.com/embed/aMaMeKHH6iM?si=GGyF1Ik5FXmef4-O',
+          'Sumala (2024)', 
           'Film horor religi tentang seorang santri bernama Sumala yang dihantui sosok gaib di pesantren. Ia harus menghadapi gangguan supranatural sambil menjaga keimanannya', 
           'Adhisty Zara, Ibrahim Risyad, Slamet Rahardjo, Unique Priscilla, dan Yusuf Mahardika')" 
           film-title="Sumala"
@@ -97,7 +102,8 @@
         </div>
     </a>
 
-    <a href="#" onclick="openModal('https://www.youtube.com/embed/smTK_AeAPHs?si=4ajfOUVlel5aHBZn','Evil Dead Rise(2023)', 
+    <a href="#" onclick="event.preventDefault(); openModal('https://www.youtube.com/embed/smTK_AeAPHs?si=4ajfOUVlel5aHBZn',
+    'Evil Dead Rise(2023)', 
           'Kisah dua saudara perempuan yang terpisah lama, kembali dipertemukan saat iblis jahat muncul dan meneror sebuah apartemen. Mereka harus bertahan dari kutukan mengerikan yang mengubah manusia menjadi makhluk haus darah.', 
           'Lily Sullivan, Alyssa Sutherland, Morgan Davies, Gabrielle Echols, Nell Fisher.')" 
           film-title="Evil Dead Rise"
@@ -111,9 +117,11 @@
         </div>
     </a>
     
-    <a href="#" onclick="openModal('Petaka Gunung Gede', 
-          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
-          'Neil Patrick Harris, Malina Weissman')" 
+    <a href="#" onclick="event.preventDefault(); openModal('https://www.youtube.com/embed/P-6STU_kfaU?si=1maVnztXSDQwZ4Ro',
+          'Petaka Gunung Gede', 
+          'mengisahkan dua sahabat, Maya dan Ita, yang mengalami teror mistis saat mendaki Gunung Gede. Ita dianggap melanggar mitos karena mendaki saat menstruasi, memicu serangkaian kejadian menyeramkan yang menguji keberanian mereka.',
+          'Arla Ailan, Adzana Ashel, Endi Arafian, Raihan Khan, Moh.Iqbal Sulaiman, Jeremie Moeremas')"
+          film-title="Petaka Gunung Gedhe" 
             class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
         <img src="https://assets.pikiran-rakyat.com/crop/0x0:0x0/1200x675/photo/2025/01/12/1425384310.jpeg" alt="Petaka Gunung Gede" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
         <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
@@ -123,9 +131,11 @@
         </div>
     </a>
     
-    <a href="#" onclick="openModal('Kemah Terlarang', 
-          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
-          'Neil Patrick Harris, Malina Weissman')" 
+    <a href="#" onclick="event.preventDefault(); openModal('https://www.youtube.com/embed/087ep9pV5bY?si=RIXPYz_UmBywsQpF',
+          'Kemah Terlarang (2024)', 
+          'film horor Indonesia yang diangkat dari kisah nyata perkemahan Pramuka di Yogyakarta tahun 2016. Ceritanya mengikuti Rini, siswi SMA yang mengikuti kemah di hutan demi membuktikan keberanian dan mendekati ketua panitia, Miko. Saat larangan kuncen setempat dilanggar, suasana berubah mencekam ketika peserta satu per satu mengalami kesurupan massal.', 
+          'Callista Arum, Fatih Unru, Derby Romero, Nayla D. Purnama, Zenia Zein')"
+          film-title="Kemah Terlarang" 
             class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
         <img src="aset/kemah terlarang.jpg" alt="Kemah Terlarang" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
         <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
@@ -138,21 +148,25 @@
 <!--Kategori Hiburan-->
   <h1 class="text-x1 font-semibold text-gray-900 dark:text-white mb-5 ">Film Hiburan</h1>
   <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 mb-10">
-      <a href="#" onclick="openModal('Una Serie de Eventos Desafortunados', 
-          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba mengungkap misteri kematian orang tuanya.', 
+      <a href="#" onclick="event.preventDefault(); openModal('https://www.youtube.com/embed/JNROZ_bk8gY?si=ZrPXcFJ_YkQTp5u_',
+          'Una Serie de Eventos Desafortunados', 
+          'Tiga bersaudara Baudelaire — Violet, Klaus, dan Sunny — yang kehilangan orang tua mereka dalam kebakaran misterius. Mereka kemudian diasuh oleh Count Olaf, seorang pria jahat yang terus mencoba mencuri harta warisan mereka.', 
           'Neil Patrick Harris, Malina Weissman')" 
+          film-title="Un A Serie De Eventos Desafortunados"
             class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
         <img src="https://www.dosismedia.com/wp-content/uploads/2018/12/una-serie-de-eventos-desafortuna-2.jpg" alt="un a series de eventos desafortuna" class="w-full h-auto object-cover transition duration-500 group-hover:scale-105 block">
         <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
           <h3 class="text-sm font-semibold text-white">
-            Un a Series de Eventos Desafortunados
+            Un a Serie de Eventos Desafortunados
           </h3>
         </div>
       </a>
 
-      <a href="#" onclick="openModal('Agak Laen', 
-          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
-          'Neil Patrick Harris, Malina Weissman')" 
+      <a href="#" onclick="event.preventDefault(); openModal('https://www.youtube.com/embed/0YLSPyGA4h0?si=yfggoZBbNNXWIr3E',
+      'Agak Laen', 
+          'kisah empat sahabat yang mengelola rumah hantu di pasar malam. Ketika seorang pengunjung meninggal karena serangan jantung akibat terlalu terkejut, mereka memutuskan untuk menyembunyikan kejadian tersebut. Namun, arwah pengunjung tersebut mulai menghantui rumah hantu mereka, menjadikannya viral dan menarik banyak pengunjung', 
+          'Bane Dion, Oki Rangga, Indra Jegel, Boris Bokie, Tissa Biani')" 
+          film-title="Agak Laen"
             class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
         <img src="https://statik.tempo.co/data/2023/12/13/id_1262844/1262844_720.jpg" alt="Agak Laen" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
         <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
@@ -162,9 +176,11 @@
         </div>
       </a>
 
-      <a href="#" onclick="openModal('Avatar', 
-          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
-          'Neil Patrick Harris, Malina Weissman')" 
+      <a href="#" onclick="event.preventDefault(); openModal('https://www.youtube.com/embed/d9MyW72ELq0?si=NT6TmZ8WgX-84CLM',
+          'Avatar: The Way of Water(2023)', 
+          ' Film ini melanjutkan kisah Jake Sully dan Neytiri di planet Pandora, dengan fokus kuat pada eksplorasi ekosistem laut yang memukau dan konflik baru yang mengancam suku Na’vi. Menggabungkan teknologi sinematik canggih dan narasi emosional, film ini menyajikan petualangan mendalam tentang keluarga, kelangsungan hidup, dan hubungan manusia dengan alam.', 
+          'Sam Worthington sebagai Jake Sully, Zoe Saldaña sebagai Neytiri, Sigourney Weaver')" 
+          film-title="Avatar"
             class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
         <img src="https://tse4.mm.bing.net/th?id=OIP.Pc5XqWRDZqnqUPvYtmARaQHaDt&pid=Api&P=0&h=180" alt="Avatar" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
         <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
@@ -174,11 +190,13 @@
         </div>
       </a>
 
-      <a href="#" onclick="openModal('Jumbo', 
-          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
-          'Neil Patrick Harris, Malina Weissman')" 
+      <a href="#" onclick="event.preventDefault(); openModal('https://www.youtube.com/embed/yMqDgbZmBdk?si=hD2b9nD-xoYD5byE',
+          'Jumbo(2025)', 
+          ' film animasi Indonesia yang disutradarai Ryan Adriandhy dan diproduksi oleh Visinema Studios. Ceritanya tentang Don, anak berumur 10 tahun dengan tubuh besar yang berpetualang bersama peri kecil Meri untuk menemukan orang tua peri tersebut dan belajar tentang keberanian serta persahabatan', 
+          'Prince Poetiray, Quinn Salman, Graciella Abigail, Muhammad Adhiyat, Yusuf Özkan, Angga Yunanda, Ratna Riantiarno, Bunga Citra Lestari, dan Ariel NOAH, Cinta Laura Kiehl, Ariyo Wahab, Kiki Narendra, Aci Resti, Rachel Amanda, Angga Dwimas Sasongko, Chicco Jerikho, Ganindra Bimo')" 
+          film-title="Jumbo"
             class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
-        <img src="https://statik.tempo.co/data/2025/03/15/id_1384879/1384879_720.jpg" alt="Jumbo" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
+        <img src="https://cdn.i-scmp.com/sites/default/files/styles/1020x680/public/d8/images/canvas/2025/04/18/613d2c45-1b99-4091-a60f-dbbbf82a6ad2_42c8db48.jpg?itok=b7TpqRTl&v=1744965296" alt="Jumbo" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
         <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
           <h3 class="text-sm font-semibold text-white">
             Jumbo
@@ -186,9 +204,11 @@
         </div>
       </a>
 
-      <a href="#" onclick="openModal('Squit Game', 
-          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
-          'Neil Patrick Harris, Malina Weissman')" 
+      <a href="#" onclick="event.preventDefault(); openModal('https://www.youtube.com/embed/oqxAJKy0ii4?si=ToPZ6MqaUTbhTp0L',
+          'Squit Game (2022)', 
+          'Serial mengisahkan 456 individu yang terlilit utang, yang menerima undangan untuk berpartisipasi dalam permainan anak-anak dengan hadiah uang tunai besar. Namun, mereka segera menyadari bahwa kegagalan dalam permainan berarti kematian.', 
+          'Lee Jung-jae, Park Hae-soo, Jung Ho-yeon, Oh Young-soo, Wi Ha-jon')"
+          film-title="Squit Game" 
             class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
         <img src="https://static1.srcdn.com/wordpress/wp-content/uploads/2023/11/two-players-threaten-to-sue-netflix-over-alleged-injuries-from-squid-games_-the-challenge-1.jpg" alt="Squit Game" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
         <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
@@ -198,9 +218,11 @@
         </div>
       </a>
 
-      <a href="#" onclick="openModal('The Super Mario Bros', 
-          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
-          'Neil Patrick Harris, Malina Weissman')" 
+      <a href="#" onclick="event.preventDefault(); openModal('https://www.youtube.com/embed/TnGl01FkMMo?si=3QlH8jYCZG-xyNpw',
+        'The Super Mario Bros (2023)', 
+          'Film animasi petualangan yang diadaptasi dari franchise video game legendaris Nintendo. Film ini mengikuti petualangan Mario dan Luigi, dua tukang ledeng bersaudara dari Brooklyn, yang terseret ke dunia ajaib dan harus menyelamatkan Kerajaan Jamur dari ancaman Bowser. ', 
+          'Crish Pratt, Charlie Day, Anya Taylor-Joy, Jack Black, Keegan-Michael Key,Seth Rogen')" 
+          film-title="The Super Mario Bros"
             class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
         <img src="https://www.nintenderos.com/wp-content/uploads/2023/02/pelicula-marios.jpg" alt="The Super Mario Bros" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
         <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
@@ -210,9 +232,11 @@
         </div>
       </a>
 
-      <a href="#" onclick="openModal('Frozen', 
-          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
-          'Neil Patrick Harris, Malina Weissman')" 
+      <a href="#" onclick="event.preventDefault(); openModal('https://www.youtube.com/embed/TbQm5doF_Uc?si=KexT0A3R3L86FIm6',
+          'Frozen(2014', 
+          'film animasi musikal produksi Walt Disney Animation Studios yang mengisahkan petualangan dua saudari kerajaan Arendelle, Anna dan Elsa. Elsa memiliki kekuatan magis untuk menciptakan es dan salju, namun ketika kekuatannya tak terkendali, ia secara tidak sengaja membekukan kerajaan dalam musim dingin abadi. Anna, bersama Kristoff, rusa kutubnya Sven, dan manusia salju lucu bernama Olaf, memulai perjalanan untuk menemukan Elsa dan mengembalikan musim panas', 
+          'Kristen Bell, Idina Menzel, Jonnathan Groff, Josh Gad')" 
+          film-title="Frozen"
             class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
         <img src="https://lumiere-a.akamaihd.net/v1/images/image_b349f970.jpeg" alt="The Super Mario Bros" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
         <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
@@ -227,9 +251,11 @@
   <h1 class="text-x1 font-semibold text-gray-900 dark:text-white mb-5 ">Film Thriller</h1>
   <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 mb-10">
 
-      <a href="#" onclick="openModal('Under Paris', 
-          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
-          'Neil Patrick Harris, Malina Weissman')" 
+      <a href="#" onclick="event.preventDefault(); openModal('https://www.youtube.com/embed/jnCefPQIH98?si=6816YTHJBsG5g_ml',
+          'Under Paris (2024)', 
+          'Film ini mengisahkan seorang ahli biologi kelautan yang berduka setelah kehilangan suaminya akibat serangan hiu raksasa bernama Lilith di Samudra Pasifik. Tiga tahun kemudian, Lilith muncul di Sungai Seine, Paris, menjelang pelaksanaan triathlon internasional. Ia bekerja sama dengan komandan polisi sungai dan aktivis lingkungan Mika untuk menghentikan ancaman tersebut. Namun, upaya mereka terhambat oleh keputusan walikota Paris yang menolak membatalkan acara demi citra kota. Situasi semakin memburuk ketika Lilith melahirkan anak-anak hiu yang juga berbahaya, mengancam keselamatan warga Paris.', 
+          'Bérénice Bejo, Nassim Lyes, Léa Léviant, Anne Marivin, ')" 
+          film-title="Under Paris"
             class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
         <img src="aset/under paris.jpg" alt="Under Paris" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
         <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
@@ -239,9 +265,11 @@
         </div>
       </a>
 
-      <a href="#" onclick="openModal('The Saddness', 
-          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba mengungkap misteri kematian orang tuanya.', 
-          'Neil Patrick Harris, Malina Weissman')" 
+      <a href="#" onclick="event.preventDefault(); openModal('https://www.youtube.com/embed/qwZMZOS_dh0?si=m-NM2SGWOUVU25pu',
+          'The Saddness (2021)', 
+          'Film ini mengisahkan pasangan muda, Jim dan Kat, yang berjuang untuk bersatu kembali di tengah wabah virus Alvin yang mengubah manusia menjadi maniak sadis. Dengan adegan kekerasan grafis dan atmosfer mencekam, film ini menjadi sorotan di berbagai festival film internasional', 
+          'Berant Zhu, Regina Lei, Ying-Ru Chen, Tzu-Chiang Wang, Emerson Tsai, Lan Wei-Hua, Chi-Min Chou, Ralf Chiu, dan Lueh-Geng Huang.')" 
+          film-title="The Saddness"
             class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
         <img src="https://image.tmdb.org/t/p/w1280/3cQLHeHphHgoamLxpOobyoPCH0e.jpg" alt="the saddness" class="w-full h-auto object-cover transition duration-500 group-hover:scale-105 block">
         <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
@@ -251,9 +279,11 @@
         </div>
       </a>
       
-      <a href="#" onclick="openModal('Evil Dead Rise', 
-          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
-          'Neil Patrick Harris, Malina Weissman')" 
+      <a href="#" onclick="event.preventDefault(); openModal('https://www.youtube.com/embed/smTK_AeAPHs?si=4ajfOUVlel5aHBZn',
+          'Evil Dead Rise(2023)', 
+          'Kisah dua saudara perempuan yang terpisah lama, kembali dipertemukan saat iblis jahat muncul dan meneror sebuah apartemen. Mereka harus bertahan dari kutukan mengerikan yang mengubah manusia menjadi makhluk haus darah.', 
+          'Lily Sullivan, Alyssa Sutherland, Morgan Davies, Gabrielle Echols, Nell Fisher.')" 
+          film-title="Evil Dead Rise"
             class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
         <img src="aset/evil%20dead%20rise.jpg" alt="Evil Dead Rise" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
         <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
@@ -264,9 +294,11 @@
       </a>
 
       
-      <a href="#" onclick="openModal('13 Bom Di Jakarta', 
-          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
-          'Neil Patrick Harris, Malina Weissman')" 
+      <a href="#" onclick="event.preventDefault(); openModal('Https://www.youtube.com/embed/uXJHPMKLgiI?si=190ydzXZm8y8OoTE',
+          '13 Bom Di Jakarta (2024)', 
+          'Film ini mengisahkan ancaman dari sekelompok teroris yang dipimpin oleh Arok, yang menyebarkan 13 bom di berbagai titik strategis di Jakarta. Badan Intelijen dan agen rahasia ditugaskan untuk menyelidiki dan mencegah serangan tersebut.',
+          'Rio Dewanto, Putri Ayudya, Chicco Kurniawan, Ardhito Pramono, Ganindra Bimo, Lutesha, Muhammad Khan, Rukman Rosadi, Niken Anjani, Andri Mashadi, Aksara Dena, Alyssa Abidin, dan Mila Jamila')" 
+          film-title="13 Bom Di Jakarta"
             class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
         <img src="https://d1tgyzt3mf06m9.cloudfront.net/v3-staging/2023/11/Teaser-Poster_Landscape.jpg" alt="13 Bom Di Jakarta" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
         <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
@@ -277,9 +309,11 @@
       </a>
       
 
-      <a href="#" onclick="openModal('Hijack 1971', 
-          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
-          'Neil Patrick Harris, Malina Weissman')" 
+      <a href="#" onclick="event.preventDefault(); openModal('https://www.youtube.com/embed/UxyutkXQnvA?si=JhoCjwRdKCAriTgy',
+          'Hijack 1971(2024)', 
+          'Film ini diangkat dari kisah nyata pembajakan pesawat Korean Air F27 pada tahun 1971. Ceritanya mengikuti pilot Tae-in dan kapten Gyu-sik yang menghadapi situasi berbahaya ketika seorang penumpang, Yong-dae, membajak pesawat dengan bom rakitan dan senjata, memaksa mereka untuk mengubah rute penerbangan ke Korea Utara. Ketegangan meningkat saat awak dan penumpang berjuang untuk bertahan hidup di tengah ancaman ledakan dan konflik udara',
+          'Ha Jung-woo, Yeo Jin-goo, Sung Dong-il, Chae Soo-bin, Kim Dong-wook, Choi Kwang-il, Kim Jong-soo, Moon Yoo-kang, Jeong Ye-jin, Moon Woo-jin, Im Se-mi, Kim Sun-young, Kim Chul-yoon, Park Ji-hwan, Park Soo-young')" 
+          film-title="Hijack 1971"
             class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
         <img src="https://cms.dmpcdn.com/movie/2024/10/04/8fc990d0-81ff-11ef-af21-8df0975922ba_webp_original.webp" alt="Hijack 1971" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
         <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
@@ -289,9 +323,11 @@
         </div>
       </a>
 
-      <a href="#" onclick="openModal('scream', 
-          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
-          'Neil Patrick Harris, Malina Weissman')" 
+      <a href="#" onclick="event.preventDefault(); openModal('https://www.youtube.com/embed/h74AXqw4Opc?si=_d-T1f8gG3kzJlYR',
+          'Scream(2023)', 
+          'Kisahnya dimulai ketika Tara Carpenter diserang oleh sosok bertopeng Ghostface, memicu serangkaian pembunuhan baru yang menargetkan sekelompok remaja yang memiliki keterkaitan dengan peristiwa masa lalu. Film ini menggabungkan elemen horor klasik dengan sentuhan modern, menyindir tren reboot dan sekuel warisan dalam genre horor', 
+          'Melissa Barrera, Mason Gooding, Jenna Ortega, Jack Quaid, Mikey Madison, Dylan Minnette, Jasmin Savoy Brown, dan Sonia Ammar. Mereka beradu akting dengan para pemeran dari film sebelumnya seperti Neve Campbell, Courteney Cox, dan David Arquette')" 
+          film-title="Scream"
             class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
         <img src="https://www.hdwallpapers.in/download/courteney_cox_as_gale_weathers__melissa_barrera_as_sam_carpenter__jenna_ortega_as_tara_carpenter__jasmin_savoy_brown_as_mindy_meeks_martin__mason_gooding_4k_hd_scream_vi-HD.jpg" alt="Scream" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
         <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
@@ -301,9 +337,11 @@
         </div>
       </a>
 
-      <a href="#" onclick="openModal('Ashfall', 
-          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
-          'Neil Patrick Harris, Malina Weissman')" 
+      <a href="#" onclick="event.preventDefault(); openModal('https://www.youtube.com/embed/24T47vQA0fY?si=0TTfK5MGNP0aiFdC',
+          'Ashfall(2019)', 
+          'Film ini mengisahkan letusan dahsyat Gunung Baekdu yang memicu gempa bumi hebat di seluruh Semenanjung Korea. Untuk mencegah letusan susulan yang lebih besar, tim khusus dari Korea Selatan bekerja sama dengan seorang agen Korea Utara dalam misi berbahaya yang melibatkan bahan nuklir. Sementara itu, warga sipil berjuang untuk bertahan hidup di tengah kekacauan',
+          'Lee Byung-hun, Ha Jung-woo, Ma Dong-seok, Bae Suzy, dan Jeon Hye-jin')" 
+          film-title="Ashfall"
             class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
         <img src="https://about.vidio.com/wp-content/uploads/2021/01/KV_Blog_ashfall.jpg" alt="Ashfall" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
         <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
@@ -313,9 +351,11 @@
         </div>
       </a>
 
-      <a href="#" onclick="openModal('Emergency Declaration', 
-          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
-          'Neil Patrick Harris, Malina Weissman')" 
+      <a href="#" onclick="event.preventDefault(); openModal('https://www.youtube.com/embed/1vg2stM_JEU?si=q_b5KSrF5L7FtU2x',
+          'Emergency Declaration(2023)', 
+          'Film ini mengisahkan situasi darurat yang terjadi di dalam pesawat internasional setelah seorang penumpang yang sehat mendadak meninggal secara misterius, memicu kepanikan dan ketegangan antara awak pesawat, penumpang, dan pihak berwenang di darat. Ketika ancaman terorisme biologis terungkap, upaya penyelamatan menjadi semakin kompleks, dengan negara-negara menolak memberikan izin pendaratan.',
+          'Song Kang-ho, Lee Byung-hun, Jeon Do-yeon, Kim Nam-gil, Im Si-wan, Kim So-jin, Park Hae-joon, Seol In-ah, Kim Bo-min, dan Hyun Bong-sik ')" 
+          film-title="Emergency Declaration"
             class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
         <img src="https://prod-images.viu.com/clip_asset_v6/1166083010/1166088672/d6cc8e4903b8e2309f6c509f18bad1082b2f19bc" alt="Emergency Declaration" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
         <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
@@ -325,9 +365,11 @@
         </div>
       </a>
 
-      <a href="#" onclick="openModal('Sekawan Limo', 
-          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
-          'Neil Patrick Harris, Malina Weissman')" 
+      <a href="#" onclick="event.preventDefault(); openModal('https://www.youtube.com/embed/ERZncVUuKlk?si=xQUJ_Q-h552QrP9o',
+          'Sekawan Limo(2024)', 
+          'Film ini mengisahkan lima pendaki—Bagas, Lenni, Dicky, Juna, dan Andrew—yang mendaki Gunung Madyopuro dan mengabaikan mitos lokal bahwa rombongan harus genap dan dilarang menoleh ke belakang. Akibatnya, mereka dihantui oleh makhluk gaib dan mulai mencurigai bahwa salah satu dari mereka bukan manusia.', 
+          'Bayu Skak, Nadya Arina, Keisya Levronka, Dono Pradana, Benidictus Siregar, Indra Pramujito, Firza Valaza, Audya Ananta, dan Cak Kartolo')" 
+          film-title="Sakawan Limo"
             class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
         <img src="https://cdn.idntimes.com/content-images/community/2024/07/screenshot-20240705-095902-instagram-df0f23db2eb9b00f31c583ec461bb2da-bd806b39fcd6f00c418412bbdcc3d76f_600x400.jpg" alt="Sekawan Limo" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
         <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
@@ -337,9 +379,11 @@
         </div>
       </a>
       
-      <a href="#" onclick="openModal('My Annoying Brother', 
-          'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
-          'Neil Patrick Harris, Malina Weissman')" 
+      <a href="#" onclick="event.preventDefault(); openModal('https://www.youtube.com/embed/5vYf4lCaTxY?si=8PmMI5ZaH1diydZt',
+          'My Annoying Brother 2024', 
+          'film ini menceritakan kisah Kemal, seorang mantan atlet judo nasional yang kehilangan penglihatannya akibat kecelakaan saat bertanding. Kehidupan Kemal yang penuh keputusasaan menjadi semakin rumit ketika kakaknya, Jaya—seorang mantan narapidana—kembali ke rumah dengan niat merawatnya demi mendapatkan pembebasan bersyarat. Hubungan mereka yang awalnya penuh konflik perlahan berubah menjadi ikatan yang lebih hangat dan penuh makna',
+          'Angga Yunanda, Vino G. Bastian, Caitlin Halderman, dan Kristo Immanuel')" 
+          film-title="My Annoying Brother"
             class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
         <img src="https://assets.pikiran-rakyat.com/crop/0x0:0x0/703x0/webp/photo/2024/10/17/1203872872.jpeg" alt="My Annoying Brother" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
         <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
@@ -348,9 +392,11 @@
           </h3>
         </div>
       </a>
-      <a href="#" onclick="openModal('Kakabos', 
+      <a href="#" onclick="event.preventDefault(); openModal('https://www.youtube.com/embed/LXRnwwpXz6s?si=UljPA1sXGHjw985c',
+        'Kakabos(2024)', 
           'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
           'Neil Patrick Harris, Malina Weissman')" 
+          film-title="kakabos"
             class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
         <img src="aset/kakabos.jpg" alt="Kakabos" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
         <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
@@ -360,9 +406,11 @@
         </div>
       </a>
 
-      <a href="#" onclick="openModal('Home Sweet Loan', 
+      <a href="#" onclick="event.preventDefault(); openModal('https://www.youtube.com/embed/rWsnLS0Q7G0?si=3Yc1mrS-2x6uFBCn',
+          'Home Sweet Loan(2024)', 
           'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
           'Neil Patrick Harris, Malina Weissman')" 
+          film-title="Home Sweet Loan"
             class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
         <img src="aset/home sweet loan.jpg" alt="Home Sweet Loan" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
         <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
@@ -372,9 +420,11 @@
         </div>
       </a>
 
-      <a href="#" onclick="openModal('Mirachel In Cell No 7', 
+      <a href="#" onclick="event.preventDefault(); openModal('https://www.youtube.com/embed/0uf6QUacVgs?si=-y7rQWAo20vmiI9t',
+          'Mirachel In Cell No 7(2023)', 
           'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
           'Neil Patrick Harris, Malina Weissman')" 
+          film-title="Mirachel In Cell No 7"
             class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
         <img src="aset/mirachel in cell no 7.jpg" alt="Mirachel In Cell No 7" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
         <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
@@ -384,9 +434,11 @@
         </div>
       </a>
 
-      <a href="#" onclick="openModal('Hospital Playlist', 
+      <a href="#" onclick=" event.preventDefault(); openModal('https://www.youtube.com/embed/xqIM2cenBAs?si=ElLmAOQQtiE3g4vG',
+          'Hospital Playlist(2020)', 
           'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
           'Neil Patrick Harris, Malina Weissman')" 
+          film-title="Hospital Playlist"
             class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
         <img src="https://data.ibtimes.sg/en/full/36943/hospital-playlist.jpg" alt="Hospital Playlist" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
         <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
@@ -396,9 +448,11 @@
         </div>
       </a>
 
-      <a href="#" onclick="openModal('Resident Playbook', 
+      <a href="#" onclick="event.preventDefault(); openModal('https://www.youtube.com/embed/VTjfJ5kWxUE?si=55A8ZlI9TsdY2KUI',
+          'Resident Playbook(2025)', 
           'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
           'Neil Patrick Harris, Malina Weissman')" 
+          film-title="Resident Playbook"
             class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
         <img src="https://i.pinimg.com/736x/58/19/78/5819780f6bb2c47ea3386331729800b4.jpg" alt="Resident Playbook" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
         <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
@@ -408,9 +462,11 @@
         </div>
       </a>
 
-      <a href="#" onclick="openModal('Study Group', 
+      <a href="#" onclick="event.preventDefault(); openModal('https://www.youtube.com/embed/Bx0piV_Uf4E?si=55GHVxPF5Um2ZT_a',
+          'Study Group', 
           'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
           'Neil Patrick Harris, Malina Weissman')" 
+          film-title="Study Group(2025)"
             class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
         <img src="https://asset-2.tstatic.net/makassar/foto/bank/images/Drama-Korea-Study-Group-Jadwal-Tayang-Sinopsis-dan-Link-Nonton-Online.jpg" alt="Study Group" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
         <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
@@ -420,11 +476,13 @@
         </div>
       </a>
 
-      <a href="#" onclick="openModal('Lovely Runner', 
+      <a href="#" onclick="event.preventDefault(); openModal('https://www.youtube.com/embed/5kk0dYa8Ccc?si=hJaPih5CfLXH15v2',
+        'Lovely Runner(2024)', 
           'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
           'Neil Patrick Harris, Malina Weissman')" 
-            class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
-        <img src="https://tse1.mm.bing.net/th?id=OIP.qPQBgms5aHk-bhSXjwINPgHaEK&pid=Api&P=0&h=180" alt="Lovely Runner" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
+          film-title="Lovelly Runner"
+            class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block fixed">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.qPQBgms5aHk-bhSXjwINPgHaEK&pid=Api&P=0&h=180" alt="Lovely Runner" class=" w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
         <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
           <h3 class="text-sm font-semibold text-white">
             Lovely Runner
@@ -432,14 +490,16 @@
         </div>
       </a>
 
-      <a href="#" onclick="openModal('Heirts', 
+      <a href="#" onclick=" event.preventDefault(); openModal('https://www.youtube.com/embed/Y0WSF5ikpvU?si=FGYynXMv_LtwuusU',
+          'The Heirts(2014)', 
           'Tiga anak yatim piatu menghadapi berbagai kejadian aneh saat mereka mencoba megungkap misteri kematian orang tuanya.', 
-          'Neil Patrick Harris, Malina Weissman')" 
+          'Neil Patrick Harris, Malina Weissman')"
+          film-title="Heirts" 
             class="relative group rounded overflow-hidden cursor-pointer bg-gray-100 dark:bg-gray-800 h-full w-full block">
         <img src="https://wallpaperaccess.com/full/42482.jpg" alt="Heirts" class="w-full h-[153px] object-cover transition duration-500 group-hover:scale-105 block">
         <div class="p-4 text-center bg-gray-100 dark:bg-gray-800">
           <h3 class="text-sm font-semibold text-white">
-            Heirts
+            The Heirts
           </h3>
         </div>
       </a>
@@ -464,11 +524,11 @@
   </div>
 
   <!-- Modal -->
-  <div id="filmModal" class="fixed inset-0 hidden justify-center items-center z-50">
+  <div id="filmModal" class="fixed inset-0 hidden justify-center items-center z-50 backdrop-blur-sm">
     <div class=" bg-gray-900 text-white w-full max-w-md mx-4 rounded-lg p-6 relative ">
       <button onclick="closeModal()" class="absolute top-3 right-4 text-gray-500 hover:text-red-500 text-2xl text-white">&times;</button>
       <div id="modalTrailer"></div>
-      <h2 id="modalTitle" class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Judul Film</h2>
+      <h2 id="modalTitle" class="text-xl font-semibold text-gray-900 dark:text-white mb-2"></h2>
       <p id="modalDesc" class="text-sm text-gray-700 dark:text-gray-300 mb-3"></p>
       <p id="modalCast" class="text-sm text-gray-700 dark:text-gray-300"></p>
     </div>
@@ -477,6 +537,7 @@
   <!-- Script -->
   <script>
     function openModal(trailer,title, description, cast) {
+      
       const embedLink = trailer.includes("watch?v=")
       ? trailer.replace("watch?v=", "embed/")
       : trailer;
@@ -485,12 +546,15 @@
       document.getElementById('modalTitle').textContent = title;
       document.getElementById('modalDesc').textContent= description;
       document.getElementById('modalCast').textContent = "Pemeran: " + cast;
-      document.getElementById('filmModal').classList.remove('hidden');
+      //document.getElementById('filmModal').classList.remove('hidden');
      // document.getElementById('filmModal').classList.add('flex');
-      
+    
+      // Tambah padding kanan supaya lebar halaman tetap sama saat overflow hidden
       const modal = document.getElementById('filmModal');
-      modal.classList.remove('hidden');
-      modal.classList.add('flex');
+      
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      
     }
 
     function closeModal() {
@@ -498,11 +562,26 @@
       modal.classList.add('hidden');
       modal.classList.remove('flex');
       //document.getElementById('filmModal').classList.add('hidden');
+      
+      document.body.classList.remove('overflow-hidden');
+      document.documentElement.classList.remove('overflow-hidden');
 
      // document.getElementById('filmModal').classList.remove('flex');
      // Hapus iframe agar video berhenti saat modal ditutup
       document.getElementById('modalTrailer').innerHTML = '';
+
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.left = '';
+      document.body.style.right = '';
+      window.scrollTo(0, scrollPosition);
     }
+
+    document.getElementById('filmModal').addEventListener('click', function(event) {
+      if (event.target === this) {
+        closeModal();
+      }
+     });
   </script>
 
   <script>
