@@ -24,55 +24,45 @@
                 href="index.html">Beranda</a></li>
         <li><a class="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
                 href="film.html">Film</a></li>
-        <li><a class="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
-                href="trending.html">Trending</a></li>
-        <li><a class="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
-                href="#">History</a></li>
       </ul>
     </nav>
   </div>
 </header> 
 <!--end header-->
 <!--Hero section-->
-<section>
-  <div class="swiper mySwiper w-full h-[600px]  overflow-hidden">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide relative">
-          <img src="aset/danur.jpg" class="min-w-full min-h-full object-cover" />
-          <div class="absolute inset-0 bg-dark bg-opacity-50 flex flex-col justify-center items-center text-white text-center px-0">
 
-          </div>
-        </div>
-        <div class="swiper-slide relative">
-          <img src="aset/under paris.jpg" class="min-w-full min-h-full object-cover object-cover " />
-          <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white text-center px-6">
+<section class="bg-white lg:grid lg:h-screen lg:place-content-center dark:bg-gray-800">
+  <div class="mx-auto w-screen max-w-screen-xl px-4 py-16 sm:px-6 sm:py-24 md:grid md:grid-cols-2 md:items-center md:gap-4 lg:px-8 lg:py-32">
+    <div class="max-w-prose text-left">
+      <h1 class="text-4xl font-bold text-gray-900 sm:text-5xl dark:text-white">Streaming Film & Series Tanpa Batas Hanya di
+        <strong class="text-indigo-500">Cinematic</strong>
+      </h1>
+      <p class="mt-4 text-base text-pretty text-gray-700 sm:text-lg/relaxed dark:text-gray-200">
+        Temukan ribuan judul dari berbagai genre, tonton kapan saja, di mana saja, dengan tampilan sinematik dan pengalaman menonton yang nyaman.
+      </p>
 
-          </div>
-        </div>
-        <div class="swiper-slide relative">
-          <img src="aset/evil dead rise.jpg" class="min-w-full min-h-full object-cover"/>
-          <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white text-center px-6">
-          </div>
-        </div>
+      <div class="mt-4 flex gap-4 sm:mt-6">
+        <a class="inline-block rounded border border-indigo-600 bg-indigo-600 px-5 py-3 font-medium text-white shadow-sm transition-colors hover:bg-indigo-700"
+          href="film.html">🎬 Mulai Menonton</a>
+
+        <a class="inline-block rounded border border-gray-200 px-5 py-3 font-medium text-gray-700 shadow-sm transition-colors hover:bg-gray-50 hover:text-gray-900 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800 dark:hover:text-white"
+          href="#koleksi">📋Daftar Film</a>
       </div>
-      <div class="swiper-button-next z-50"></div>
-      <div class="swiper-button-prev z-50"></div>
+    </div>
   </div>
 </section>
 <!--eend hero -->
 
-<main class="bg-gray-100 dark:bg-gray-800 min-h-screen py-10 px-4 sm:px-6 lg:px-8">
-  <!-- Selamat Datang -->
-  <section id="welcome page" class="mb-10 text-center">
-    
-    <h1 class="text-4xl font-extrabold text-gray-900 dark:text-white mb-4">
-      Selamat Datang di Website Film Kami
-    </h1>
-    <p class="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
-      Temukan film favoritmu dan nikmati rekomendasi terbaik setiap hari.
-    </p>
-  </section>
 
+<section id="koleksi" class="py-12 bg-gray-50 dark:bg-gray-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-xl font-bold text-white sm:text-3xl">
+      Galeri Film
+    </h2>
+    <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8">
+      Pilihan film terbaik yang bisa kamu tonton kapan saja.
+    </p>
+  </div>
   <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 mb-10">
     <a href="#" onclick= "event.preventDefault(); openModal(
       'https://www.youtube.com/embed/9EsGdyVx6HM?si=hp0m0wS_VcLpJGfS', 
@@ -88,7 +78,6 @@
             Danur 3
           </h3>
         </div>
-
     </a>
     
     <a href="#" onclick="event.preventDefault(); openModal('https://www.youtube.com/embed/dkbwPpPJCLo?si=-GARJlAcDGoK-wr4',
@@ -528,6 +517,7 @@
       <div class="h-32 rounded bg-cover bg-center" style="background-image: url('')"></div>
       <div class="h-32 rounded bg-cover bg-center" style="background-image: url('')"></div>
   </div>
+</section>
 
   <!-- Modal -->
   <div id="filmModal" class="fixed inset-0 hidden justify-center items-center z-50 backdrop-blur-sm">
@@ -590,21 +580,5 @@
      });
   </script>
 </section>
-</main>
-<script>
-  new Swiper(".mySwiper", {
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    effect: "fade",
-  });
-
-</script>
 </body>
 </html>
